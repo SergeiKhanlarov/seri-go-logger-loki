@@ -26,9 +26,8 @@ package main
 import (
     "context"
     
-    sglogger "github.com/SergeiKhanlarov/seri-go-logger"
-    "github.com/SergeiKhanlarov/seri-go-logger-loki/clients"
-    "github.com/SergeiKhanlarov/seri-go-logger-loki/sgloggerloki"
+	sglogger "github.com/SergeiKhanlarov/seri-go-logger"
+	sgloki "github.com/SergeiKhanlarov/seri-go-logger-loki"
 )
 
 func main() {
