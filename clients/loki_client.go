@@ -46,8 +46,8 @@ func NewLokiClient(config LokiConfig) LokiClient {
 	return &lokiClient{
 		config: config,
 		stream: map[string]interface{}{
-			"job": config.job,
-			"app": config.app,
+			"job": config.Job,
+			"app": config.App,
 		},
 		client: &http.Client{
 			Timeout: 10 * time.Second,
@@ -82,7 +82,7 @@ func (l *lokiClient) SendLog(level, message string, params map[string]interface{
 		return fmt.Errorf("failed to marshal Loki payload: %w", err)
 	}
 
-	resp, err := l.client.Post(l.config.lokiUrl+"/loki/api/v1/push", "application/json", bytes.NewBuffer(jsonData))
+	resp, err := l.client.Post(l.config.LokiUrl+"/loki/api/v1/push", "application/json", bytes.NewBuffer(jsonData))
 	if err != nil {
 		return fmt.Errorf("failed to send log to Loki: %w", err)
 	}
