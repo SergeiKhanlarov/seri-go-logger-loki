@@ -114,7 +114,7 @@ func (p *lokiProvider) Write(ctx context.Context, level sglogger.Level, message 
 //   - Сообщение логируется если его уровень >= установленному в конфигурации
 //   - Например, при LevelInfo логируются Info, Warn, Error, Fatal
 func (p *lokiProvider) ShouldLog(ctx context.Context, level sglogger.Level) bool {
-	return level >= p.config.level
+	return level >= p.config.Level
 }
 
 // Close закрывает провайдер и освобождает ресурсы

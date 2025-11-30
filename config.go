@@ -17,7 +17,7 @@ import sglogger "github.com/SergeiKhanlarov/seri-go-logger"
 //	}
 type ProviderConfig struct {
 	sglogger.LoggerConfig        // Встроенная базовая конфигурация логгера
-	level       sglogger.Level   // Специфичный для провайдера уровень логирования
+	Level       sglogger.Level   // Специфичный для провайдера уровень логирования
 }
 
 // GetLevel возвращает строковое представление уровня логирования провайдера.
@@ -35,7 +35,7 @@ type ProviderConfig struct {
 //
 //	level := config.GetLevel() // возвращает "debug", "info", etc.
 func (p *ProviderConfig) GetLevel() string {
-	switch p.level {
+	switch p.Level {
 	case sglogger.LevelDebug:
 		return "debug"
 	case sglogger.LevelInfo:
