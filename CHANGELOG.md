@@ -47,3 +47,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [v0.1.2] - 2025-11-30
 ### Fixed
 - cannot refer to unexported field level in struct literal of type sgloggerconsole.ProviderConfig (loki config)
+
+## [v0.1.3] - 2025-12-01
+### Fixed
+- fixed loki non string types error

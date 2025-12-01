@@ -29,7 +29,7 @@ type lokiClient struct {
 // LokiStream представляет поток логов в формате Loki
 type LokiStream struct {
 	// Stream лейблы потока для индексации и поиска
-	Stream map[string]interface{} `json:"stream"`
+	Stream map[string]string `json:"stream"`
 	// Values массив пар [timestamp, message]
 	Values [][]string `json:"values"`
 }
